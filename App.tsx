@@ -11,6 +11,9 @@ import {
 } from '@expo-google-fonts/roboto'
 
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
+import { styled } from 'nativewind'
+
+const StyledStripes = styled(Stripes)
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -29,7 +32,8 @@ export default function App() {
       className="flex-1 items-center justify-center bg-gray-900"
       imageStyle={{ position: 'absolute', left: '-100%' }}
     >
-      <Stripes />
+      <StyledStripes className="absolute left-2 " />
+      <View className="flex-1 items-center justify-center gap-6"></View>
       <StatusBar style="light" translucent />
     </ImageBackground>
   )
